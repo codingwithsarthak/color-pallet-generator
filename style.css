@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    overflow: hidden; /* Prevent scroll bars */
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.col {
+    flex: 1; /* Each column takes equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease; /* Smooth color fade */
+    position: relative;
+}
+
+.hex-code {
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.1s;
+}
+
+.hex-code:active {
+    transform: scale(0.95);
+}
+
+.lock-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lock-btn:hover {
+    opacity: 1;
+}
+
+/* Floating Instructions */
+.instructions {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    pointer-events: none; /* Clicks pass through */
+    color: #333;
+}
+
+/* Toast Notification */
+.notification {
+    position: fixed;
+    bottom: -50px; /* Hidden initially */
+    right: 30px;
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.notification.active {
+    bottom: 30px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .hex-code {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+}

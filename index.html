@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="col">
+            <h2 class="hex-code" onclick="copyToClipboard(this)">#FFFFFF</h2>
+            <button class="lock-btn" onclick="toggleLock(this)">
+                <span class="icon-open">🔓</span> <span class="icon-closed" style="display:none;">🔒</span> </button>
+        </div>
+        <div class="col">
+            <h2 class="hex-code" onclick="copyToClipboard(this)">#FFFFFF</h2>
+            <button class="lock-btn" onclick="toggleLock(this)">
+                <span class="icon-open">🔓</span>
+                <span class="icon-closed" style="display:none;">🔒</span>
+            </button>
+        </div>
+        <div class="col">
+            <h2 class="hex-code" onclick="copyToClipboard(this)">#FFFFFF</h2>
+            <button class="lock-btn" onclick="toggleLock(this)">
+                <span class="icon-open">🔓</span>
+                <span class="icon-closed" style="display:none;">🔒</span>
+            </button>
+        </div>
+        <div class="col">
+            <h2 class="hex-code" onclick="copyToClipboard(this)">#FFFFFF</h2>
+            <button class="lock-btn" onclick="toggleLock(this)">
+                <span class="icon-open">🔓</span>
+                <span class="icon-closed" style="display:none;">🔒</span>
+            </button>
+        </div>
+        <div class="col">
+            <h2 class="hex-code" onclick="copyToClipboard(this)">#FFFFFF</h2>
+            <button class="lock-btn" onclick="toggleLock(this)">
+                <span class="icon-open">🔓</span>
+                <span class="icon-closed" style="display:none;">🔒</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="instructions">Press <strong>Spacebar</strong> to Generate</div>
+    <div id="notification" class="notification">Color Copied!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
